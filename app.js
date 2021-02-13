@@ -7,6 +7,17 @@
 //     displaySongs(data.data);
 // }
 
+
+//Enter button to submit
+document.getElementById("search-field")
+    .addEventListener("keypress", function (event) {
+    // event.preventDefault();
+    if (event.key == 'Enter') {
+        document.getElementById("search-button").click();
+    }
+});
+//----------------------------------------------^^^^^^^^^^
+
 const searchSongs = () => {
     const searchText = document.getElementById('search-field').value;
     const url = `https://api.lyrics.ovh/suggest/${searchText}`
